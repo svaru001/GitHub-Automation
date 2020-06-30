@@ -2,11 +2,11 @@ import RepoPage from '../../pages/repo.page'
 import LoginPage from '../../pages/login.page'
 const assert = require('assert');
 
-describe('should test for git url', ()=> {
+describe('retrieve repo infomration for given url', ()=> {
     
     before(()=>{
         LoginPage.login();
-        RepoPage.open()
+        RepoPage.userInputRepoOpen()
         browser.pause(500)
         if(RepoPage.is404Displayed()){
             console.log('Uh oh, Looks like you don\'t have access to this repository!')

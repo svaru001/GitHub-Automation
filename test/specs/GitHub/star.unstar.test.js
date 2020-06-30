@@ -1,6 +1,6 @@
 import RepoPage from '../../pages/repo.page'
 import LoginPage from '../../pages/login.page'
-describe('Git Repository Page Tests', ()=> {
+describe('Star / unstar repository', ()=> {
     
     before(()=>{
         LoginPage.login();
@@ -21,13 +21,6 @@ describe('Git Repository Page Tests', ()=> {
         RepoPage.starredFormButton.click()
         expect(RepoPage.unstarredForm).toBeDisplayed()
         browser.saveScreenshot('data/screenshots/should unstar a repository.png')
-
-    })
-    it('should search file in repository', () => {
-        RepoPage.goToPageButton.click()
-        RepoPage.fileSearchInput.setValue('.gitignore')
-        expect(RepoPage.searchResult).toHaveText('.gitignore')
-        browser.saveScreenshot('data/screenshots/should search file in repository.png')
 
     })
 })
