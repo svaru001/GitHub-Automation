@@ -1,0 +1,14 @@
+[
+    { 
+        "repo": "appium", 
+        "org": "appium" 
+    },
+    { 
+        "repo": "react", 
+        "org": "facebook" 
+    },
+    {
+        "repo": "AppiumTestDistribution", 
+        "org": "AppiumTestDistribution"  
+    }
+]
