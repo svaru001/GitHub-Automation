@@ -14,7 +14,7 @@ rl.question("Please share any Git Repo  >>", function(name) {
     });
 }else{
     console.log('- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ');
-    console.log('Uh oh, this doesn\'t seems to be a git url, please retry');
+    console.log('Uh oh, this doesn\'t seems to be a valid git url, please rerun with valid url');
     console.log('- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ');
     process.exit(1)
 }
