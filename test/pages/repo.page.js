@@ -4,7 +4,8 @@ class RepoPage extends Page {
 
   get authorName() { return $('.author a'); }
   get repoName() { return $('span.author ~ strong a'); }
-
+  get starCount() { return $('a[aria-label*="this repository"]')}
+  get starCaption() {return $('.starring-container button svg')}
   get starredForm(){return $('form.starred.js-social-form')}
   get starredFormButton() {return $('form.starred.js-social-form button[type=\'submit\']')}
 
@@ -15,9 +16,9 @@ class RepoPage extends Page {
   get fileSearchInput() {return $('input.tree-finder-input')}
   get searchResult() {return $('span.js-tree-browser-result-path')}
 
-  get totalReleases() {return $('//a[contains(.,\'Latest release\')]//parent::h2//following-sibling::div/a')}
-  get latestRelease() {return $('//a[contains(.,\'Latest release\')]//parent::h2//following-sibling::a/div/span')}
-  
+  get totalReleases() {return $('//a[contains(.,\'Releases\')]/span')}
+  get latestRelease() {return $('//a[contains(.,\'Releases\')]//parent::h2//following-sibling::a/div//span') }
+
   open() {
     let fs, url;
     fs = require('fs');
@@ -26,6 +27,14 @@ class RepoPage extends Page {
   }
 
   waitForRepoPageToLoad() {
+    if (!this.authorName.isDisplayed()) {
+      this.authorName.waitForDisplayed(5000);
+    }
+  }
+  is404Displayed(){
+    if(browser.getTitle().includes('Page not found'))
+    return true
+    else return false
   }
 }
 export default new RepoPage()

@@ -1,10 +1,41 @@
 import RepoPage from '../../pages/repo.page'
+import LoginPage from '../../pages/login.page'
+const assert = require('assert');
 
-describe('It should test for git url', ()=> {
+describe('should test for git url', ()=> {
     
     before(()=>{
-        RepoPage.open();    
+        LoginPage.login();
+        RepoPage.open()
+        browser.pause(500)
+        if(RepoPage.is404Displayed()){
+            console.log('Uh oh, Looks like you don\'t have access to this repository!')
+            assert.equal(0,1,'Uh oh, Looks like you don\'t have access to this repository!')
+        }
     })
+    
+    it('Author name should be visible',() => {
+         expect(RepoPage.authorName).toBeExisting();
+         browser.saveScreenshot('data/screenshots/Author name should be visible.png')
+
+    });
+
+    it('Repository name should be visible',() => {
+        expect(RepoPage.repoName).toBeExisting();
+        browser.saveScreenshot('data/screenshots/Repository name should be visible.png')
+    });
+
+    it('Star details should be visible',() => {
+        expect(RepoPage.starCount).toBeExisting();
+        browser.saveScreenshot('data/screenshots/Repository name should be visible.png')
+    });
+
+    it('Release details should be visible',() => {
+        expect(RepoPage.totalReleases).toBeExisting();
+        expect(RepoPage.latestRelease).toBeExisting();
+        browser.saveScreenshot('data/screenshots/Repository name should be visible.png')
+    });
+
     it('should fetch required data', () => {
         let valuetoprint= '- - - - - - - - - - - - - - - - - - - - - - - - -\n'
         valuetoprint+= RepoPage.authorName.getText()+' / '+ RepoPage.repoName.getText()+'\n \n';
@@ -18,5 +49,7 @@ describe('It should test for git url', ()=> {
         }
         valuetoprint+= '- - - - - - - - - - - - - - - - - - - - - - - - - - - - \n';
         console.log(valuetoprint);
+        browser.saveScreenshot('data/screenshots/Repository name should be visible.png')
     })
+    
 })
