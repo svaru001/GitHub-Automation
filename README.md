@@ -2,7 +2,7 @@
 
 
 
-This repository is created to functional test automation of [https://webuildsg.github.io](https://webuildsg.github.io/data).
+This repository is created to functional test automation of [GitHub.com](https://github.com).
 
 Tecnologies used:
 - [JavaScript (ECMAScript 6)](http://es6-features.org/#Constants)
@@ -19,7 +19,7 @@ Tecnologies used:
 Clone this Repository
 
 ```sh
-git clone https://github.com/svaru001/GitHub-Automation
+git clone git@github.com:svaru001/GitHub-Automation.git
 ```
 
 Install Dependancies
@@ -28,8 +28,38 @@ Install Dependancies
 npm install
 ```
 
-Run Tests in Docker (No Pre-setup required)
+Run Console app to retrieve repo details
 
 ```sh
-npm run docker-test
+npm run test1
 ```
+
+Run all GitHub testcases
+
+```sh
+npm run all-tests
+```
+
+Run Allure Report to get detailed report with Screenshots
+
+```sh
+npm run report
+```
+## Allure reports (default)
+
+you will be redirected to Allure HTML reporter after Test execution is finished.
+You can Run Report explicitly 
+```sh
+npm run report
+```
+
+![Allure Report Demo](data/demo.png)
+
+
+## Running test suit
+
+To run complete test suit:
+- Open terminal.
+- Navigate to the path the project was cloned in.
+- Run `npm run all-tests`
+- Run `npm run report`

@@ -11,12 +11,18 @@ describe('Commit/Branches/Tags actions tests', ()=> {
 
     it('Commits count should be displayed', () => {
         expect(RepoPage.commitsCount).toBeDisplayed();
+        browser.saveScreenshot('data/screenshots/Commits count should be displayed.png')
+
     })
     it('Number of branches hould be displayed', () => {
         expect(RepoPage.branchesCount).toBeDisplayed();
+        browser.saveScreenshot('data/screenshots/Number of branches hould be displayed.png')
+
     })
     it('Number of tags should be displayed', () => {
         expect(RepoPage.tagsCount).toBeDisplayed();
+        browser.saveScreenshot('data/screenshots/Number of tags should be displayed.png')
+
     })
     it('when click on commits, should redirect to commits/master', () => {
         RepoPage.commitsCount.click()
