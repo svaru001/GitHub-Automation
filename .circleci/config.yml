@@ -1,0 +1,20 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+    - {image: 'circleci/node:latest-browsers'}
+    steps:
+    - checkout
+    - run:
+        name: Install Dependancies
+        command: |
+          npm install
+    - run:
+        name: Run tests
+        command: |
+          npm run cicd-tests
+    - store_test_results: {path: ./report/junit}
+workflows:
+  version: 2
+  scheduled-workflow:
+    jobs: [build]
