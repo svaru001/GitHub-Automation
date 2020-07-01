@@ -12,6 +12,7 @@ describe('Star / unstar repository', ()=> {
     })
     it('should star a repository', () => {
         setPrerequisite()
+        browser.pause(500)
         RepoPage.unstarredFormButton.click()
         expect(RepoPage.starredForm).toBeDisplayed()
         browser.saveScreenshot('data/screenshots/should star a repository.png')
