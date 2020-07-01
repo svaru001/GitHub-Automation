@@ -72,12 +72,12 @@ To run complete test suit:
 
 ![Allure Report Demo](data/demo.png)
 
-# CircleCI CICD Workflow Preview
+## CircleCI CICD Workflow Preview
 - Scheduled Workflow
 - Git Action Workflow (Commit/ PR raised)
 
 ![CircleCI CICD Integration](data/circleci-demo.png)
 
-# CircleCI Test Results
+## CircleCI Test Results
 
 ![CircleCI Test Results](data/circleci-demo2.png)
