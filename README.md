@@ -14,6 +14,10 @@ Tecnologies used:
 - [Allure Reporter](https://docs.qameta.io/allure/)
 - [CircleCI CICD Tool](https://circleci.com/)
 
+## Pre-requisites
+* NodeJS
+* Docker
+
 ## Usage
 
 Clone this Repository
@@ -46,6 +50,11 @@ Run all GitHub testcases
 npm run all-tests
 ```
 
+Run all GitHub testcases on Saucelab Cloud (Run More than 10 various capabilities (OS Versions))
+
+```sh
+npm run saucelab-tests
+```
 ## Allure reports (default)
 
 you will be redirected to Allure HTML reporter after Test execution is finished.

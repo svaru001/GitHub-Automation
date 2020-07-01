@@ -14,7 +14,7 @@ describe('Commit/Branches/Tags actions tests', ()=> {
         browser.saveScreenshot('data/screenshots/Commits count should be displayed.png')
 
     })
-    it('Number of branches hould be displayed', () => {
+    it('Number of branches should be displayed', () => {
         expect(RepoPage.branchesCount).toBeDisplayed();
         browser.saveScreenshot('data/screenshots/Number of branches hould be displayed.png')
 

@@ -8,6 +8,7 @@
     "test1": "./node_modules/.bin/babel-node util/test.js && ./node_modules/.bin/wdio run-configs/docker.config.js --spec repo.getinfo.test.js",
     "all-tests": "./node_modules/.bin/wdio run-configs/docker.config.js",
     "cicd-tests": "./node_modules/.bin/wdio run-configs/wdio.conf.js",
+    "saucelab-tests": "./node_modules/.bin/wdio run-configs/saucelab.cloud.conf.js",
     "report": "allure generate --clean && allure open"
   },
   "keywords": [],
