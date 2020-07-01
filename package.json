@@ -7,6 +7,7 @@
     "docker-selenium-hub": "docker-compose up -d",
     "test1": "./node_modules/.bin/babel-node util/test.js && ./node_modules/.bin/wdio run-configs/docker.config.js --spec repo.getinfo.test.js",
     "all-tests": "./node_modules/.bin/wdio run-configs/docker.config.js",
+    "cicd-tests": "./node_modules/.bin/wdio run-configs/wdio.conf.js --spec repo.getinfo.test.js",
     "report": "allure generate --clean && allure open"
   },
   "keywords": [],
@@ -20,6 +21,7 @@
     "@babel/register": "^7.7.4",
     "@wdio/allure-reporter": "^6.1.22",
     "@wdio/cli": "^6.1.22",
+    "@wdio/junit-reporter": "^6.1.14",
     "@wdio/local-runner": "^6.1.22",
     "@wdio/mocha-framework": "^6.1.19",
     "@wdio/spec-reporter": "^6.1.14",
