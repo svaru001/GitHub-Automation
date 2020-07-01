@@ -7,6 +7,7 @@ This repository is created to functional test automation of [GitHub.com](https:/
 Tecnologies used:
 - [JavaScript (ECMAScript 6)](http://es6-features.org/#Constants)
 - [Page Object Model](https://medium.com/tech-tajawal/page-object-model-pom-design-pattern-f9588630800b)
+- [Sauce Labs Cloud](https://saucelabs.com/)
 - [WebDriver.io](https://webdriver.io)
 - [Docker](https://docker.com)
 - [Selenium for docker](https://github.com/SeleniumHQ/docker-selenium)
@@ -26,6 +27,12 @@ Install Dependancies
 
 ```sh
 npm install
+```
+
+Start Selenium Hub Locally
+
+```sh
+npm run docker-selenium-hub 
 ```
 
 Run Console app to retrieve repo details
@@ -56,7 +63,7 @@ npm run report
 ![Allure Report Demo](data/demo.png)
 
 
-## Running test suit
+## Running test suite
 
 To run complete test suit:
 - Open terminal.

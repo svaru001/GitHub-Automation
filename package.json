@@ -4,8 +4,9 @@
   "description": "",
   "main": "test.js",
   "scripts": {
-    "test1": "./node_modules/.bin/babel-node test.js && ./node_modules/.bin/wdio wdio.conf.js --spec repo.getinfo.test.js",
-    "all-tests": "./node_modules/.bin/babel-node test.js && ./node_modules/.bin/wdio wdio.conf.js",
+    "docker-selenium-hub": "docker-compose up -d",
+    "test1": "./node_modules/.bin/babel-node util/test.js && ./node_modules/.bin/wdio run-configs/docker.config.js --spec repo.getinfo.test.js",
+    "all-tests": "./node_modules/.bin/wdio run-configs/docker.config.js",
     "report": "allure generate --clean && allure open"
   },
   "keywords": [],
@@ -25,6 +26,7 @@
     "@wdio/sync": "^6.1.14",
     "allure-commandline": "^2.13.0",
     "chromedriver": "^83.0.0",
-    "wdio-chromedriver-service": "^6.0.3"
+    "wdio-chromedriver-service": "^6.0.3",
+    "wdio-docker-service": "^2.4.0"
   }
 }
