@@ -46,11 +46,6 @@ Run all GitHub testcases
 npm run all-tests
 ```
 
-Run Allure Report to get detailed report with Screenshots
-
-```sh
-npm run report
-```
 ## Allure reports (default)
 
 you will be redirected to Allure HTML reporter after Test execution is finished.
@@ -62,7 +57,7 @@ npm run report
 
 ## Running test suite
 
-To run complete test suit:
+To run complete test suite:
 - Open terminal.
 - Navigate to the path the project was cloned in.
 - Run `npm run all-tests`

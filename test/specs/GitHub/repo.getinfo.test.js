@@ -14,27 +14,27 @@ describe('retrieve repo infomration for given url', ()=> {
         }
     })
     
-    it('Author name should be visible',() => {
-         expect(RepoPage.authorName).toBeExisting();
-         browser.saveScreenshot('data/screenshots/Author name should be visible.png')
+    // it('Author name should be visible',() => {
+    //      expect(RepoPage.authorName).toBeExisting();
+    //      browser.saveScreenshot('data/screenshots/Author name should be visible.png')
 
-    });
+    // });
 
-    it('Repository name should be visible',() => {
-        expect(RepoPage.repoName).toBeExisting();
-        browser.saveScreenshot('data/screenshots/Repository name should be visible.png')
-    });
+    // it('Repository name should be visible',() => {
+    //     expect(RepoPage.repoName).toBeExisting();
+    //     browser.saveScreenshot('data/screenshots/Repository name should be visible.png')
+    // });
 
-    it('Star details should be visible',() => {
-        expect(RepoPage.starCount).toBeExisting();
-        browser.saveScreenshot('data/screenshots/Repository name should be visible.png')
-    });
+    // it('Star details should be visible',() => {
+    //     expect(RepoPage.starCount).toBeExisting();
+    //     browser.saveScreenshot('data/screenshots/Repository name should be visible.png')
+    // });
 
-    it('Release details should be visible',() => {
-        expect(RepoPage.totalReleases).toBeExisting();
-        expect(RepoPage.latestRelease).toBeExisting();
-        browser.saveScreenshot('data/screenshots/Repository name should be visible.png')
-    });
+    // it('Release details should be visible',() => {
+    //     expect(RepoPage.totalReleases).toBeExisting();
+    //     expect(RepoPage.latestRelease).toBeExisting();
+    //     browser.saveScreenshot('data/screenshots/Repository name should be visible.png')
+    // });
 
     it('should fetch required data [Please scroll up for test results]', () => {
         let valuetoprint= '- - - - - - - - - - - - - - - - - - - - - - - - -\n'
