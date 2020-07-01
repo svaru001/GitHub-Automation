@@ -131,7 +131,13 @@ exports.config = {
             disableWebdriverStepsReporting: true,
             disableMochaHooks: true
             //isableWebdriverScreenshotsReporting: false,
-        }]
+        }],
+  ['junit', {
+    outputDir: 'report/junit',
+    outputFileFormat: function(options) { // optional
+      return `test-${options.cid}-results.xml`
+    }
+  }]
     ],
 
 
