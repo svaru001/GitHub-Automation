@@ -36,7 +36,7 @@ describe('retrieve repo infomration for given url', ()=> {
         browser.saveScreenshot('data/screenshots/Repository name should be visible.png')
     });
 
-    it('should fetch required data', () => {
+    it('should fetch required data [Please scroll up for test results]', () => {
         let valuetoprint= '- - - - - - - - - - - - - - - - - - - - - - - - -\n'
         valuetoprint+= RepoPage.authorName.getText()+' / '+ RepoPage.repoName.getText()+'\n \n';
         valuetoprint+='Stars :'+RepoPage.starCount.getText() +'\n';
