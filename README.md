@@ -12,8 +12,7 @@ Tecnologies used:
 - [Docker](https://docker.com)
 - [Selenium for docker](https://github.com/SeleniumHQ/docker-selenium)
 - [Allure Reporter](https://docs.qameta.io/allure/)
-
-
+- [CircleCI CICD Tool](https://circleci.com/)
 
 ## Usage
 
@@ -60,8 +59,6 @@ You can Run Report explicitly
 npm run report
 ```
 
-![Allure Report Demo](data/demo.png)
-
 
 ## Running test suite
 
@@ -70,3 +67,17 @@ To run complete test suit:
 - Navigate to the path the project was cloned in.
 - Run `npm run all-tests`
 - Run `npm run report`
+
+## Report Preview
+
+![Allure Report Demo](data/demo.png)
+
+# CircleCI CICD Workflow Preview
+- Scheduled Workflow
+- Git Action Workflow (Commit/ PR raised)
+
+![CircleCI CICD Integration](data/circleci-demo.png)
+
+# CircleCI Test Results
+
+![CircleCI Test Results](data/circleci-demo2.png)
