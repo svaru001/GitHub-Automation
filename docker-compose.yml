@@ -12,15 +12,15 @@ services:
       HUB_HOST: hub
       NODE_MAX_INSTANCES: 5
 
-  firefox:
-    image: selenium/node-firefox:latest
-    volumes:
-      - /dev/shm:/dev/shm
-    depends_on:
-      - hub
-    environment:
-      HUB_HOST: hub
-      NODE_MAX_INSTANCES: 5
+  # firefox:
+  #   image: selenium/node-firefox:latest
+  #   volumes:
+  #     - /dev/shm:/dev/shm
+  #   depends_on:
+  #     - hub
+  #   environment:
+  #     HUB_HOST: hub
+  #     NODE_MAX_INSTANCES: 5
 
   hub:
     image: selenium/hub:latest
